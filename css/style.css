@@ -1,0 +1,259 @@
+body {
+	background: #1a1a1a url(../images/repeat.png) repeat;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/********************** POSITIONING **********************/
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.productContainer, h1, h2, ul, h3, h4, h5, p {
+	text-align: center;
+}
+
+.whiteBG {
+	border-bottom: 30px solid #00ff00;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	background: white;
+}
+
+.clear::after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+/********************** TYPOGRAPHY **********************/
+h1 {
+	font-weight: bold;
+	font-size: 48px;
+	color: white;
+	padding-top: 20px;
+}
+
+h2 {
+	color: #00ff00;
+	font-size: 16px;
+	letter-spacing: 8.1px;
+	padding-bottom: 20px;
+}
+
+h2:first-letter {
+	margin-left: 8px;
+}
+
+h3 {
+	font-size: 48px;
+	color: black;
+}
+
+h4 {
+	color: white;
+	font-size: 48px;
+}
+
+h5 {
+	padding-top: 50px;
+	font-size: 24px;
+}
+
+h5 + p {
+	padding-bottom: 50px;
+	color: #ccc;
+}
+
+h6 {
+	color: #00ff00;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+
+h6 + p {
+	color: #ccc;
+}
+
+/********************** NAVI **********************/
+.navi a {
+	display: block;
+	padding: 20px;
+	background: white;
+	text-decoration: none;
+	color: #1a1a1a;
+}
+
+.navi {
+
+}
+
+.navi a:hover, .catNav a:hover {
+	background: #00ff00;
+}
+
+.navi a {
+	display: none;
+}
+
+.navi .show {
+	display: initial;
+	display: block;
+}
+
+/********************** PROMO **********************/
+.promo {
+	background: url(../images/main.png) no-repeat;
+	/*background-size: cover;*/
+	padding: 8% 2.5% 8% 2.5%;
+	width: 100%;
+	float: left;
+	margin-top: -1px;
+}
+
+/********************** CAT NAV **********************/
+.catNav {
+	z-index: 0;
+}
+
+.catNav a, .show {
+	display: block;
+	background: #1a1a1a;
+	color: white;
+	text-decoration: none;
+	padding: 20px;
+}
+
+.catNav a {
+	display: none;
+}
+
+.catNav .show {
+	display: initial;
+	display: block;
+}
+
+/********************** PRODUCTS **********************/
+.productContainer {
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.productContainer img {
+	padding-bottom: 10px;
+}
+
+
+.productContainer:nth-of-type(3n + 1) {
+	clear: left;
+}
+
+.productContainer:after {
+	content: url(../images/add.png);
+	position: absolute;
+	right: 150px;
+	top: 0;
+}
+
+#copy {
+	color: white;
+	float: left;
+}
+
+#toTop {
+	float: right;
+	color: white;
+}
+
+@media (min-width: 600px) {
+	.productContainer {
+		float: left;
+		width: 33.33333%;
+	}
+
+	h5, h5 + p {
+		clear: both;
+	}
+
+	.productContainer:after {
+		content: url(../images/add.png);
+		position: absolute;
+		right: 50px;
+		top: 0;
+	}
+}
+
+@media (min-width: 900px) {
+	.main {
+		position: relative;
+	}
+	.catNav {
+		position: absolute;
+		top: 0px;
+		left: -135px;
+	}
+	.catNav a {
+		display: block;
+	}
+
+	.catNav li a.show {
+		display: none;
+	}
+	.products {
+		width: 100%;
+		float: left;
+		background: white;
+	}
+
+	.headLogo {
+		float: left;
+	}
+
+	.catnav a.show, .navi a.show {
+		display: none;
+	}
+
+	.navi {
+		margin-top: 30px;
+	}
+
+	.navi li {
+		display: inline-block;
+	}
+
+	.navi a:hover {
+		background: none;
+		color: #00ff00;
+	}
+
+	.navi a {
+		color: white;
+		display: inline-block;
+		background: none;
+	}
+
+	.navi {
+		float: right;
+	}
+
+	h1 {
+		text-align: left;
+	}
+
+	h1:first-letter {
+		margin-left: -3px;
+	}
+
+	h2 {
+		text-align: left;
+	}
+
+	h2:first-letter {
+		margin-left: 0px;
+	}
+
+	.main {
+		margin-bottom: 50px;
+	}
+}
